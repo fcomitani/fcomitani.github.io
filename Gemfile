@@ -10,3 +10,5 @@ group :jekyll_plugins do
     gem 'unicode_utils'
     gem 'webrick'
 end
+gem "kramdown-parser-gfm"
+gem 'http_parser.rb', git: "https://github.com/tmm1/http_parser.rb.git"
