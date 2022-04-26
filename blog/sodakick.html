@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Federico Comitani | blog</title>
-  <meta name="description" content="A simple blog page with bibbase.">
+  <title>Federico Comitani | Sodakick Football Dashboard</title>
+  <meta name="description" content="A simple projects page.">
 
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="canonical" href="/">
@@ -26,6 +26,9 @@
         Federico Comitani
     </span>
     
+
+
+
 
     <nav class="site-nav">
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -70,49 +73,63 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Data Minstrel</h1>
-    <h5 class="post-description">Data Visualization Stories</h5>
+    <h1 class="post-title">Sodakick</h1>
+    <h5 class="post-description">April 25, 2022 | Football Statistics Dashboard</h5>
   </header>
 
-  <ul class="projects">
-    <li>
-    <a href="/blog/dvs2021" class="inner">
-      <div class="li-img">
-        <img src="/assets/img/blog1_cropped.png" alt="Map" />
-      </div>
-      
-      <div class="li-text">
-        <h3 class="li-head"><strong>The Data Visualization Society Atlas</strong></h3>
-        <div class="li-sub">
-          <p>My entry for the DVS State of the Industry 2021 Challenge.
-            <br><small>January 11, 2022</small></p>
-        </div>
-      </div>
-    </a>
-    </li>
+  <article>
+    
 
-    <li>
-    <a href="/blog/sodakick" class="inner">
-      <div class="li-img">
-        <img src="/assets/img/blog2_cropped.png" alt="Map" />
-      </div>
-      
-      <div class="li-text">
-        <h3 class="li-head"><strong>Sodakick</strong></h3>
-        <div class="li-sub">
-          <p>A basic dashboard to navigate football data 
-            scraped from FBref.com
-            <br><small>April 25, 2022</small></p>
-        </div>
-      </div>
-    </a>
-    </li>
+    <a href="https://fbref.com/"></a>FBref</a> is an extensive data base of historical football statistics. It includes all major leagues, clubs and both national and international competitions. 
 
+    Sometimes it's difficult to make sense of all the data. So I wrote a minimal dashboard in Python with <a href="https://plotly.com/"></a>Plotly</a> to help compare the performance of players from the men's big five European leagues.
+  
+    </article>
+  <br>
+  <br>
 
-
-  </ul>
+  <article>
+    <div class="section" id="sodakick-dashboard">
+    <iframe src='https://sodakick.herokuapp.com/'  width="800" height="800" frameBorder="0">
+    <p>Your browser does not support iframes. To see the contents of this
+      dashboard try a different browser or visit https://sodakick.herokuapp.com</p>
+    </iframe></div>
+  </article>
 
   <br>
+  <br>
+  <br>
+
+  <article>
+
+    The dashboard is divided into two sections. On the left, a low-dimensionality projection can help you identify players that have similar skills. The scatter plot can be coloured by the value of several features (e.g. goals, passes, saves, ...), below is the distribution of values within the selected group and the matching the colour bar.
+    <br><br> 
+    Points in the scatterplot can be subset through the dropdown menu above, by season (2017 to 2022, or the average of all seasons), league, team, role or nationality. Except for the season, all other categories are additive, and multiple values can be selected.
+
+    <img src="/assets/img/sdk/sdk_2022_left.png" alt="Sodakick, left panel explanation", style="width:75%", class="centered_image">  
+
+
+   </article>
+
+  <br>
+  <br>
+      
+  <article>
+
+    On the right, a radar plot can display the skills of a single player, selected with the drop-down menu at the top.
+    These are grouped into 9 major labels: their experience, aggressivity, blocking capabilities, passes, support to actions forward, shots made, goals, precision in actions forward(such as how many goals per shot are made) and goalkeeping skills. These values are normalized across the data set. 
+    <br>
+    Multiple players can be selected and compared. Those who worked on different teams are kept separate, in case their role and their stats 
+    changed.
+    <br><br>
+    The bottom plot shows a single skill, to be selected, and how it changed with time for each selected player. The line represents the average and on the right is a marker showing the improvement (if any) through time: upper facing triangle if the player improved in the last years of data available, lower facing triangle if it got worse and a square if they maintained a similar score (within a 5% boundary). 
+    <br>
+    Clicking a data point on the map on the left will summon the matching values of the selected player on the plots to the right. 
+
+    <img src="/assets/img/sdk/sdk_2022_right.png" alt="Sodakick, right panel explanation", style="width:75%", class="centered_image">  
+
+    </article>
+      
   <br>
   <br>
 
@@ -123,7 +140,7 @@
     <footer>
 
   <div class="wrapper">
-    &copy; Copyright 2021-2022 Federico Comitani.
+    &copy; Copyright 2022 Federico Comitani.
     Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
     Last updated: April 2022.
 
